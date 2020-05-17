@@ -20,7 +20,8 @@ return(
 {
    players.map((item,index)=>{
       return <Player playerInfo={item} key={index} />
-   })
+   }
+   )
 }
 </tbody>
 </table>
