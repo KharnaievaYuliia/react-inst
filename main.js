@@ -3,7 +3,7 @@
 let student = {name:"Yuliia", surname: "Kharnaieva", age: 36};
 let {name, surname, age } = student;
 console.log( age);
-
+console.log(name);
 let [ names, surnames ] = ["Yuliia","Titova"];
 console.log(surnames);
 
