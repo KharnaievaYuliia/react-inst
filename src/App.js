@@ -9,5 +9,4 @@ const App = () => {
     <Dz1 />
   );
 }
- 
 export default App
