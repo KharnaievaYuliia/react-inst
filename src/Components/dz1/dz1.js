@@ -2,6 +2,7 @@ import React from 'react';
 import './dz1.css';
 
 const Dz1 = () => {
+  return(
     <div className="App">
     <header className="App-header">
     <h1>My country is Ukraine</h1>
@@ -11,6 +12,7 @@ const Dz1 = () => {
     <p>The quantity of Cherkassy residens is 300000 persons</p>
     </header>
   </div>
+  )
 }
 
 export default Dz1;
