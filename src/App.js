@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import Dz2 from './components/dz2/task1';
+import Dz2 from './Components/dz2/dz2';
 
 const App = () => {
   return (
