@@ -1,5 +1,5 @@
 import React from 'react';
-import Dz2 from './Components/dz2/dz2/task1';
+import Dz2 from './Components/dz2/task1';
 
 const App = () => {
   return (
