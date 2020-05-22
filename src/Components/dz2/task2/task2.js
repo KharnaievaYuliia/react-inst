@@ -1,6 +1,8 @@
 import React from 'react';
 import DPerson from './person.js';
 
+
+
 const personalData = {
 
   experience: {
@@ -40,6 +42,7 @@ const Dz22 = () => {
     <div style={styles.div}>
     <h1>Personal page</h1>
     <DPerson person={person} setPerson={setPerson}/>
+    
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 
 
+
   const Dz23 = ({person, setPerson})=>{
 
     const change = (e)=>{
@@ -10,7 +11,9 @@ import React from 'react';
   
   return(
     <>
-      <input type="text" value={person} onChange={ e=> change(e) }/>
+    
+     <p> <input type="text" value={person} onChange={ e=> change(e) }/></p>
+     <p> <input type="text" value={person} onChange={ e=> change(e) }/></p>
     </>
   )
 }
