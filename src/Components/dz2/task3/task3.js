@@ -1,16 +1,19 @@
 import React from 'react';
 
 
-const Dz23 = () => { 
+
+  const Dz23 = ({person, setPerson})=>{
+
+    const change = (e)=>{
+      setPerson(e.target.value);
+    }
   
-  return (
-    <div>
-    <h1>My task 3</h1>
-    
-    
-     
-    </div>
-  );
+  return(
+    <>
+      <input type="text" value={person} onChange={ e=> change(e) }/>
+    </>
+  )
 }
 
+ 
 export default Dz23;

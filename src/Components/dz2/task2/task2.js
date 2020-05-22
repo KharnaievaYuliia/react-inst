@@ -39,7 +39,7 @@ const Dz22 = () => {
   return (
     <div style={styles.div}>
     <h1>Personal page</h1>
-    <DPerson person={person} />
+    <DPerson person={person} setPerson={setPerson}/>
     </div>
   );
 }
