@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Cw2 from "./Components/cw2";
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const fc = {
   info: {
@@ -33,7 +34,11 @@ const fc = {
 const App = () => {
   const [clubData, setClubData] = React.useState(fc);
   return (
-    <Cw2 clubData={clubData} />
+    <div>
+      <CssBaseline />
+      <Cw2 clubData={clubData} />
+    </div>
+   
   );
 }
  
