@@ -2,7 +2,7 @@ import React from 'react';
 import setDefaultData from "./utils/setDefaultData";
 import { Table, TableHead, TableRow, TableCell, TableBody } from "@material-ui/core/";
 import ShowTask from "./Components/showTask";
-import { useEffect } from "react";
+import {useEffect} from "react";
 
 const App = () => {
   const listData = JSON.parse(localStorage.getItem("toDoList"));
@@ -13,9 +13,7 @@ const App = () => {
     JSON.parse(localStorage.getItem("toDoList"))
   );
 
-  //useEffect(()=>{
-  //setToDoList(JSON.parse(localStorage.getItem("toDoList")))
-  //},[localStorage.getItem("toDoList")]);
+
 
   return (
     <Table>
@@ -30,7 +28,7 @@ const App = () => {
 
       <TableBody>
         {
-          toDoList.map((item, index, setToDoList) => {
+          toDoList.map((item, index,setToDoList) => {
             return <ShowTask item={item} index={index} setToDoList={setToDoList} key={item.id} />
           })
         }

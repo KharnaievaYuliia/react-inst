@@ -1,10 +1,9 @@
 import React from "react";
 import { TableRow, TableCell, Checkbox } from "@material-ui/core/";
 import changePerformanceStatus from "../utils/changePerfomanceStatus";
-const ShowPerfomance = ({done,handleChangePerformanceStatus}) =>{
-const handleChange =()=>{
-    handleChangePerformanceStatus();
-}
+
+const ShowPerfomance = ({done,handleChange}) =>{
+
 
 return (
     <Checkbox checked={done} onChange={handleChange}/>
@@ -12,7 +11,7 @@ return (
 
 }
 
-const ShowTask = ({ item,index }) => {
+const ShowTask = ({ item,index,setToDoList }) => {
 const handleChangePerformanceStatus = ()=>{
     changePerformanceStatus(item.id);
 }
@@ -21,8 +20,8 @@ const handleChangePerformanceStatus = ()=>{
             <TableCell>{index+1}</TableCell>
             <TableCell>{item.text}</TableCell>
             <TableCell>
-                <ShowPerfomance done={item.done}/>
-                handleChangePerformanceStatus={handleChangePerformanceStatus}
+                <ShowPerfomance done={item.done}
+                handleChange = {handleChangePerformanceStatus}/>
             </TableCell>
             <TableCell>Delete</TableCell>
         </TableRow>
