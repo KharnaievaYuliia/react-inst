@@ -13,7 +13,7 @@ return (
 
 const ShowTask = ({ item,index,setToDoList }) => {
 const handleChangePerformanceStatus = ()=>{
-    changePerformanceStatus(item.id);
+    changePerformanceStatus(item.id,setToDoList);
 }
     return (
         <TableRow>
@@ -21,7 +21,7 @@ const handleChangePerformanceStatus = ()=>{
             <TableCell>{item.text}</TableCell>
             <TableCell>
                 <ShowPerfomance done={item.done}
-                handleChange = {handleChangePerformanceStatus}/>
+                handleChangePerformanceStatus = {handleChangePerformanceStatus}/>
             </TableCell>
             <TableCell>Delete</TableCell>
         </TableRow>
