@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Dz3 from './Components/dz3/dz3.js';
 
-const App = ( {name} ) => {
-return(
-  <div>
-<h1>Hello world!!!</h1>
-<p>Your name {name} </p>
-  </div>
-  
-)
+const App = () => {
+  return (
+    <div>
+      <CssBaseline />
+      <Dz3 />
+    </div>
+
+  )
 }
 export default App
+
+
+
+
