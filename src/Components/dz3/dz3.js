@@ -45,19 +45,19 @@ const Dz3 = () => {
         <Router>
 
             <Grid container direction="row" className={classes.root}>
-                <div className="title">Cherkassy</div>
+                <div className="title">Cherkasy</div>
                 <ul>
                     <li>
-                        <Link to="/main" className="li">General data</Link>
+                        <Link to="/main" className="li">General data /</Link>
                     </li>
                     <li>
-                        <Link to="/place" className="li">Famous place</Link>
+                        <Link to="/place" className="li">Famous place /</Link>
                     </li>
                     <li>
-                        <Link to="/attractions" className="li">Attractions</Link>
+                        <Link to="/attractions" className="li">Attractions /</Link>
                     </li>
                     <li>
-                        <Link to="/photos" className="li">City photos</Link>
+                        <Link to="/photos" className="li">City photos /</Link>
                     </li>
                 </ul>
 

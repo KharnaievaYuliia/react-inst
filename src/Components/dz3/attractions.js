@@ -1,12 +1,9 @@
 import React from 'react';
+import './dz3.css';
 
 const styles = {
-    div: {
-        margin: "0 auto",
-        width: "1300px",
-    },
+   
     flex: {
-        fontSize: "20px",
         display: "flex",
         flexDirection: "column",
     },
@@ -16,7 +13,7 @@ const styles = {
 }
 const Attractions = () => {
     return (
-        <div style={styles.div}>
+        <div className="div">
             <h1>The most popular places</h1>
             <div style={styles.flex}>
                 <a href="./photos" style={styles.a}>Hill of Glory</a>

@@ -1,16 +1,11 @@
 import React from 'react';
+import './dz3.css';
 
-const styles = {
-    div: {
-        margin: "0 auto",
-        width: "1300px",
-        fontSize: "20px"
-    }
-}
+
 const Main = () => {
 
     return (
-        <div style={styles.div}>
+        <div className="div">
             <h1>Main information about Cherkassy</h1>
             <p><b>Cherkasy is a city</b>, regional and district center in Ukraine, industrial center of the Central Economic District, a significant cultural and educational center. The city is known since the XIII century and during its existence has played a role in the history of Ukraine. Cherkasy was the center of formation of the Cossacks, the inhabitants of the city took a direct part in Khmelnytsky and Koliivshchyna. The growth of the city, after receiving the status of a regional center, led to its transformation into a major industrial center and the main cultural center of the region.
         </p>
