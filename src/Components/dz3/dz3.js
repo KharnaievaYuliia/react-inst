@@ -9,11 +9,12 @@ import Photos from './photos.js';
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "SteelBlue",
+        backgroundColor: "white",
         "& .title": {
-            color: "darkgrey",
-            fontSize: "45px",
-            marginLeft: "35px"
+            color: "FireBrick",
+            fontSize: "65px",
+            marginLeft: "35px",
+            fontWeight: "bold"
         },
         "& li": {
             listStyleType: "none",
@@ -24,12 +25,17 @@ const useStyles = makeStyles({
 
         "& .li": {
             textDecoration: "none",
-            color: "#fff",
+            color: "darkblue",
             fontSize: "30px",
-            paddingTop: "20px"
+        },
+        "& ul": {
+            paddingTop: "15px"
+        },
+        "& .foto": {
+            width: "100%",
+            height: "80vh",
 
         },
-
     },
 });
 
@@ -37,53 +43,56 @@ const Dz3 = () => {
     const classes = useStyles();
     return (
         <Router>
+
             <Grid container direction="row" className={classes.root}>
                 <div className="title">Cherkassy</div>
-                    <ul>
-                        <li>
-                            <Link to="/main" className="li">Information about Cherkassy</Link>
-                        </li>
-                        <li>
-                            <Link to="/place" className="li">Famous place</Link>
-                        </li>
-                        <li>
-                            <Link to="/attractions" className="li">Attractions</Link>
-                        </li>
-                        <li>
-                            <Link to="/photos" className="li">City photos</Link>
-                        </li>
-                    </ul>
+                <ul>
+                    <li>
+                        <Link to="/main" className="li">General data</Link>
+                    </li>
+                    <li>
+                        <Link to="/place" className="li">Famous place</Link>
+                    </li>
+                    <li>
+                        <Link to="/attractions" className="li">Attractions</Link>
+                    </li>
+                    <li>
+                        <Link to="/photos" className="li">City photos</Link>
+                    </li>
+                </ul>
+
+
+                <img src="./dz3/main.jpg" className="foto" alt="main" />
+
+                <Switch>
+
+                    <Route path="/place">
+
+                        <Place />
+
+                    </Route>
+
+                    <Route path="/attractions">
+
+                        <Attractions />
+
+                    </Route>
+
+                    <Route path="/photos">
+
+                        <Photos />
+
+                    </Route>
+
+
+                    <Route path="/main">
+
+                        <Main />
+
+                    </Route>
+
+                </Switch>
             </Grid>
-
-            <Switch>
-
-                <Route path="/place">
-                    
-                    <Place />
-
-                </Route>
-
-                <Route path="/attractions">
-
-                    <Attractions />
-
-                </Route>
-
-                <Route path="/photos">
-
-                    <Photos />
-
-                </Route>
-
-
-                <Route path="/main">
-
-                    <Main />
-
-                </Route>
-
-            </Switch>
-
         </Router>
     );
 }
