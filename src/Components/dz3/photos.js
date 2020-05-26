@@ -4,7 +4,6 @@ const styles = {
     div: {
         margin: "0 auto",
         width: "1300px",
-
     },
     photo: {
         width: "600px",

@@ -4,8 +4,7 @@ const styles = {
     div: {
         margin: "0 auto",
         width: "1300px",
-        fontSize: 20,
-
+        fontSize: "20px"
     }
 }
 const Main = () => {
