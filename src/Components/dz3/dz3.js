@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
 import Main from './main.js';
 import Place from './place.js';
 import Attractions from './attractions.js';
@@ -34,7 +35,18 @@ const useStyles = makeStyles({
         "& .foto": {
             width: "100%",
             height: "80vh",
-
+        },
+        "& .textfield": {
+            marginLeft: "35px",
+            marginTop:"30px",
+        },
+        "& .but": {
+            padding: "15px 55px",
+            fontSize: "20px",
+            borderRadius: "5px",
+            border:"1px solid grey",
+            marginTop:"25px",
+            marginLeft: "35px",
         },
     },
 });
@@ -62,7 +74,7 @@ const Dz3 = () => {
                 </ul>
 
 
-                <img src="./dz3/main.jpg" className="foto" alt="main" />
+                <img src="./dz3/cherkassy.jpg" className="foto" alt="main" />
 
                 <Switch>
 
@@ -79,7 +91,13 @@ const Dz3 = () => {
                     </Route>
 
                     <Route path="/photos">
-
+                    <form className={classes.root} >
+                    <TextField className="textfield" type="text" label="surname" name="surname" />
+                    <TextField className="textfield" type="password" label="password" name="password" />
+                    <TextField className="textfield" type="email" label="email" name="email" />
+                    <TextField className="textfield" type="photo" label="photo" name="photo" />
+                    <button className="but" type="submit">submit</button>
+                </form>
                         <Photos />
 
                     </Route>
@@ -92,6 +110,9 @@ const Dz3 = () => {
                     </Route>
 
                 </Switch>
+
+              
+
             </Grid>
         </Router>
     );
