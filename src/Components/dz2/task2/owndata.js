@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Owndata = ({owndata})=> {
+    
     return(
 
         <div>

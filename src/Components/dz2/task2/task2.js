@@ -1,5 +1,7 @@
 import React from 'react';
-import DPerson from './person.js';
+import Skills from './skill.js';
+import Owndata from './owndata.js';
+import Experience from './experience.js';
 
 
 
@@ -37,11 +39,13 @@ const styles = {
   }
 }
 const Dz22 = () => { 
- const [person,setPerson]=React.useState(personalData);
+
   return (
     <div style={styles.div}>
     <h1>Personal page</h1>
-    <DPerson person={person} setPerson={setPerson}/>
+    <Experience experience={personalData.experience}/>
+    <Owndata owndata={personalData.owndata}/>
+    <Skills skills={personalData.skills}/>
     
     </div>
   );

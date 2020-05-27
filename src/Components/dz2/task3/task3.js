@@ -1,5 +1,6 @@
 import React from 'react';
-import DPerson from './person.js';
+import Owndata from './owndata.js';
+import Experience from './experience.js';
 
 const personalData = {
 
@@ -16,16 +17,6 @@ owndata: {
     email: "zzzolga@ukr.net",
     city: "Odessa",
   }
-,
-
-skills: [
-"Higher economic education",
-"HR skills",
-"Thorough knowledge of logistics and supply",
-"English - Upper Intermediate",
-"Excellent PC knowledge",
-"Experience in managing large projects - 5 years,sales experience - 4 years "
-],
 
 }
 
@@ -36,11 +27,11 @@ const styles = {
   }
 }
 const Dz23 = () => { 
- const [person,setPerson]=React.useState(personalData);
   return (
     <div style={styles.div}>
     <h1>Personal page</h1>
-    <DPerson person={person} setPerson={setPerson}/>
+    <Experience experience={personalData.experience}/>
+    <Owndata owndata={personalData.owndata}/>
     </div>
   );
 }
