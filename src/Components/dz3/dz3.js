@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import Add from './add.js';
 import Main from './main.js';
 import Place from './place.js';
 import Attractions from './attractions.js';
@@ -71,6 +71,10 @@ const Dz3 = () => {
                     <li>
                         <Link to="/photos" className="li">City photos /</Link>
                     </li>
+
+                    <li>
+                        <Link to="/add" className="li">Add photos /</Link>
+                    </li>
                 </ul>
 
 
@@ -91,18 +95,16 @@ const Dz3 = () => {
                     </Route>
 
                     <Route path="/photos">
-                    <form className={classes.root} >
-                    <TextField className="textfield" type="text" label="surname" name="surname" />
-                    <TextField className="textfield" type="password" label="password" name="password" />
-                    <TextField className="textfield" type="email" label="email" name="email" />
-                    <TextField className="textfield" type="photo" label="photo" name="photo" />
-                    <button className="but" type="submit">submit</button>
-                </form>
+                   
                         <Photos />
 
                     </Route>
 
+                    <Route path="/add">
+                   
+                   <Add />
 
+               </Route>
                     <Route path="/main">
 
                         <Main />
