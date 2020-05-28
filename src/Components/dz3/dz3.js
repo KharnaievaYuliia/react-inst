@@ -38,14 +38,14 @@ const useStyles = makeStyles({
         },
         "& .textfield": {
             marginLeft: "35px",
-            marginTop:"30px",
+            marginTop: "30px",
         },
         "& .but": {
             padding: "15px 55px",
             fontSize: "20px",
             borderRadius: "5px",
-            border:"1px solid grey",
-            marginTop:"25px",
+            border: "1px solid grey",
+            marginTop: "25px",
             marginLeft: "35px",
         },
     },
@@ -54,6 +54,7 @@ const useStyles = makeStyles({
 const Dz3 = () => {
     const classes = useStyles();
     return (
+        
         <Router>
 
             <Grid container direction="row" className={classes.root}>
@@ -95,16 +96,17 @@ const Dz3 = () => {
                     </Route>
 
                     <Route path="/photos">
-                   
+
                         <Photos />
 
                     </Route>
 
                     <Route path="/add">
-                   
-                   <Add />
 
-               </Route>
+                        <Add />
+
+                    </Route>
+
                     <Route path="/main">
 
                         <Main />
@@ -112,8 +114,6 @@ const Dz3 = () => {
                     </Route>
 
                 </Switch>
-
-              
 
             </Grid>
         </Router>
