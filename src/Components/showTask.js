@@ -45,7 +45,7 @@ const handleDelete = () => {
                 <ShowPerfomance done={item.done}
                 handleChange = {handleChange}/>
             </TableCell>
-            <TableCell onClick={handleDelete} >Delete</TableCell>
+            <TableCell onClick={handleDelete}>Delete</TableCell>
         </TableRow>
     )
 }
