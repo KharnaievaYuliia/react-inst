@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
+import {getAlbumId,getAlbumImages} from "./utils/API";
 
-const App = ( {name} ) => {
+const App = (  ) => {
+  const [ albumIdArray,setAlbumIdArray] = React.useState();
+ const [albumWithImagesArray,setAlbumWithImagesArray]
+useEffect(()=>{
+getAlbumId()
+.then((res)=>setAlbumIdArray(res.data.data));
+},[]);
+useEffect(()=>{
+let images = [];
+
+},[albumIdArray]);
 return(
   <div>
-<h1>Hello world!!!</h1>
-<p>Your name {name} </p>
+
   </div>
   
 )
