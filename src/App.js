@@ -5,12 +5,12 @@ import ShowTask from "./Components/showTask";
 
 
 const App = () => {
-  const listData = JSON.parse(localStorage.getItem("toDoList"));
+  const listData = JSON.parse(localStorage.getItem("toDoLists"));
   if (!listData || listData.length < 1) {
     setDefaultData();
   }
-  const [toDoList, setToDoList] = React.useState(
-    JSON.parse(localStorage.getItem("toDoList"))
+  const [toDoLists, setToDoLists] = React.useState(
+    JSON.parse(localStorage.getItem("toDoLists"))
   );
 
   return (
@@ -26,8 +26,8 @@ const App = () => {
 
       <TableBody>
         {
-          toDoList.map((item, index) => {
-            return <ShowTask item={item} index={index} setToDoList={setToDoList} key={item.id} />
+          toDoLists.map((item, index) => {
+            return <ShowTask item={item} index={index} setToDoLists={setToDoLists} key={item.id} />
           })
         }
 

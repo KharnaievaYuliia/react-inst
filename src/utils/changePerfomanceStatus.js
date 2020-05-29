@@ -1,9 +1,9 @@
-const changePerformanceStatus = (id,setToDoList) => {
+const changePerformanceStatus = (id,setToDoLists) => {
 
-    const toDoList = JSON.parse(localStorage.getItem("toDoList"));
-    const itemToChange = toDoList.find((item)=> item.id===id);
+    const toDoLists = JSON.parse(localStorage.getItem("toDoLists"));
+    const itemToChange = toDoLists.find((item)=> item.id===id);
     itemToChange.done =!itemToChange.done;
-    localStorage.setItem("toDoList",JSON.stringify(toDoList));
-    setToDoList(toDoList);
+    localStorage.setItem("toDoLists",JSON.stringify(toDoLists));
+    setToDoLists(toDoLists);
 }
 export default changePerformanceStatus;

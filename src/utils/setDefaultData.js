@@ -2,7 +2,7 @@
 const setDefaultData =()=>{
 
 localStorage.setItem(
-    "toDoList",
+    "toDoLists",
     JSON.stringify([
         {id:0, text: "Learn ReactJS",done: true},
         {id:1, text: "Visit IT STEP",done: true},

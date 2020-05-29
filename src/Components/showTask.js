@@ -11,9 +11,9 @@ return (
 
 }
 
-const ShowTask = ({ item,index,setToDoList }) => {
+const ShowTask = ({ item,index,setToDoLists }) => {
 const handleChange = (event)=>{
-    changePerformanceStatus(item.id,setToDoList);
+    changePerformanceStatus(item.id,setToDoLists);
 }
     return (
         <TableRow>
