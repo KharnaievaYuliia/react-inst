@@ -11,8 +11,6 @@ const App = () => {
   } = React.useContext(StoreContext);
   console.log(events);
 
-
-
   return (
 
     <div>
@@ -32,11 +30,8 @@ const App = () => {
             <Route path="/:category/:eventId">
             <EventInfo events={events}/>
           </Route>
-
           <Route path="/">
-
           </Route>
-         
         </Switch>
       </Router>
     </div>
