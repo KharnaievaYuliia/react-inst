@@ -3,6 +3,7 @@ import './App.css';
 import { StoreContext } from "./utils/store";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import EventsPage from "./Components/eventsPage";
+import EventInfo from "./Components/eventInfo";
 
 const App = () => {
   const {
@@ -27,12 +28,15 @@ const App = () => {
         <Switch>
           <Route path="/:path">
             <EventsPage events={events}/>
-            <EventsPage />
+            </Route>
+            <Route path="/:category/:eventId">
+            <EventInfo events={events}/>
           </Route>
 
           <Route path="/">
 
           </Route>
+         
         </Switch>
       </Router>
     </div>
