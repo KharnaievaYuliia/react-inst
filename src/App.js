@@ -1,13 +1,22 @@
 import React from 'react';
 import './App.css';
+import {StoreContext} from "./utils/store";
 
-const App = ( {name} ) => {
+
+const App = (  ) => {
+  const {
+    ["events"]: [events, setEvents],
+  } = React.useContext(StoreContext);
+  console.log(events);
+
+
+
 return(
-  <div>
-<h1>Hello world!!!</h1>
-<p>Your name {name} </p>
-  </div>
   
+  <div>
+
+  </div>
+ 
 )
 }
 export default App
