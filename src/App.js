@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import {StoreContext} from "./utils/store";
+import { StoreContext } from "./utils/store";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import EventsPage from "./Components/eventsPage";
 
-
-const App = (  ) => {
+const App = () => {
   const {
     ["events"]: [events, setEvents],
   } = React.useContext(StoreContext);
@@ -11,12 +12,31 @@ const App = (  ) => {
 
 
 
-return(
-  
-  <div>
+  return (
 
-  </div>
- 
-)
+    <div>
+      <Router>
+        <nav>
+          {
+            events.map((event) => {
+              return <p key={event.id}>
+                <Link to={`/${event.name}`}>{event.name}</Link> </p>
+            })
+          }
+        </nav>
+        <Switch>
+          <Route path="/:path">
+            <EventsPage events={events}/>
+            <EventsPage />
+          </Route>
+
+          <Route path="/">
+
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+
+  )
 }
 export default App
