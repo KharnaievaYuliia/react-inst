@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getAlbumId, getAlbumImages } from "./utils/API";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { getAlbumId, getAlbumImages } from './utils/API.js';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { makeStyles, CssBaseline, Grid } from '@material-ui/core';
 
 const App = () => {
   const [albumIdArray, setAlbumIdArray] = React.useState();
@@ -44,4 +45,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
