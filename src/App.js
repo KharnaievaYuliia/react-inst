@@ -24,12 +24,13 @@ const App = () => {
           }
         </nav>
         <Switch>
-          <Route path="/:path">
-            <EventsPage events={events}/>
-            </Route>
+          
             <Route path="/:category/:eventId">
             <EventInfo events={events}/>
           </Route>
+          <Route path="/:path">
+            <EventsPage events={events}/>
+            </Route>
           <Route path="/">
           </Route>
         </Switch>
