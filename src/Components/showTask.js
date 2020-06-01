@@ -4,8 +4,9 @@ import changePerformanceStatus from "../utils/changePerfomanceStatus";
 import changeLine from '../utils/changeLine.js';
 import deleteLine from '../utils/deleteLine.js';
 
-const ShowPerfomance = ({done,handleChange}) =>{
 
+
+const ShowPerfomance = ({done,handleChange}) =>{
 
 return (
     <Checkbox checked={done} onChange={handleChange}/>
@@ -14,6 +15,9 @@ return (
 }
 
 const ShowTask = ({ item,index,setToDoList }) => {
+
+
+
 const {id,text,done} = item;
 const [line, setLine] = useState(text);
 
@@ -33,20 +37,22 @@ const handleDelete = () => {
     deleteLine(id, setToDoList);
 }
     return (
+     
         <TableRow>
-            <TableCell>{index+1}</TableCell>
+            <TableCell className="body">{index+1}</TableCell>
 
-            <TableCell>
-                <TextField defaultValue={line} onChange={handleLineChange} onBlur={handleLineBlur}/>
+            <TableCell className="body">
+                <TextField  className="textfield" defaultValue={line} onChange={handleLineChange} onBlur={handleLineBlur}/>
             </TableCell>
 
-            <TableCell>{item.text}</TableCell>
-            <TableCell>
+            <TableCell className="body">{item.text}</TableCell>
+            <TableCell className="body">
                 <ShowPerfomance done={item.done}
                 handleChange = {handleChange}/>
             </TableCell>
-            <TableCell onClick={handleDelete}>Delete</TableCell>
+            <TableCell className="body" onClick={handleDelete}>Delete</TableCell>
         </TableRow>
+  
     )
 }
 export default ShowTask;
