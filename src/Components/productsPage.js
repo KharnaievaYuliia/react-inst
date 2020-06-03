@@ -39,7 +39,7 @@ const ProductsPage = (props) => {
                         <Link className={classes.link} to={`/${currentCategory.name}/${product.id}`}>
                             <Box className={classes.div} component={Paper} key={product.id}>
                                 <p>{product.name}</p>
-
+                              
                             </Box>
                         </Link>
                     )
