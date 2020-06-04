@@ -8,13 +8,11 @@ import ProductInfo from "./Components/productInfo";
 
 const useStyles = makeStyles({
   root: {
-    width: '1300px',
-    height: '100vh',
+    width: '1200px',
     margin: '0 auto',
     fontSize: '30px',
     fontWeight: 'bold',
-    backgroundColor: '#ebe6e8',
-
+  
   },
   header: {
     display: 'flex',
