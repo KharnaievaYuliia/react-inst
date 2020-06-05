@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { makeStyles, CssBaseline, Grid } from '@material-ui/core';
 import { Box, Paper } from "@material-ui/core";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const useStyles = makeStyles({
 
@@ -23,11 +24,9 @@ const useStyles = makeStyles({
 const ProductInfo = (props) => {
     const productName = props.match.params.category;
     const { products } = props;
-
+    
     const currentCategory = products.find(product => product.name === productName);
     const currentProducts = currentCategory.products;
-
-
     const classes = useStyles();
 
     return (
