@@ -10,20 +10,20 @@ const useStyles = makeStyles({
     link: {
         textDecoration: 'none',
         padding: '10px',
-        
+
     },
     div: {
         backgroundColor: '#c97594',
         color: '#471125',
         padding: '5px 15px',
-        margin:'20px 5px',
-        textAlign:'center',
-        boxShadow:'0 0 10px rgba(0,0,0,0.5)',
-        borderRadius:'7px',
+        margin: '20px 5px',
+        textAlign: 'center',
+        boxShadow: '0 0 10px rgba(0,0,0,0.5)',
+        borderRadius: '7px',
     },
-    img:{
-        width:'200px',
-        margin:'20px',
+    img: {
+        width: '200px',
+        margin: '20px',
     }
 });
 
@@ -47,7 +47,7 @@ const ProductsPage = (props) => {
                         <Link className={classes.link} to={`/${currentCategory.name}/${product.id}`}>
                             <Box className={classes.div} component={Paper} key={product.id}>
                                 <p>{product.name}</p>
-                                <p> <img className={classes.img} src={product.img} alt="foto"/>  </p>
+                                <p> <img className={classes.img} src={product.img} alt="foto" />  </p>
                             </Box>
                         </Link>
                     )

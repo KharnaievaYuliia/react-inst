@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     margin: '0 auto',
     fontSize: '30px',
     fontWeight: 'bold',
-  
+
   },
   header: {
     display: 'flex',
