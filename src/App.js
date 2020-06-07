@@ -88,7 +88,7 @@ const App = () => {
             {albumImages.map(album => {
               return (
                 <Route key={album.id} path={`/${album.id}`}>
-                  <Grid xs={5} md={8} xl={11}>
+                  <Grid item xl={11} md={8} sm={5}>
                     {album.images.map((img =>
                       <div key={img.id}>
                         <img className={classes.img} src={img.link} alt={img.id} />
